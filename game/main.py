@@ -7,8 +7,9 @@ import pygame
 
 # Local App Imports
 from map import Map
-from settings import FPS, RESOLUTION
 from player import Player
+from raycasting import RayCasting
+from settings import FPS, RESOLUTION
 
 
 class Game:
@@ -22,6 +23,7 @@ class Game:
     def new_game(self):
         self.map = Map(self)
         self.player = Player(self)
+        self.raycasting = RayCasting(self)
 
     def update(self):
         self.player.update()
